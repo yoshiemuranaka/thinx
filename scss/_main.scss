@@ -2,19 +2,32 @@
 	width: 100%;
 	background-color: $grey--light;
 	position: relative;
+	height: 100%;
 }
 
 .product__description {
 	position: fixed;
 	width: 25%;
 	left: 7%;
-	top: 40%;
+	top: 30%;
+	&.not-sticky {
+		position: absolute;
+		// bottom: 0;
+		// transform: translateY(-70%);
+		// top: unset;
+	}
 }
 .product__options {
 	position: fixed;
 	width: 25%;
 	right: 7%;
-	top: 40%;
+	top: 30%;
+	&.not-sticky {
+		position: absolute;
+		// bottom: 0;
+		// transform: translateY(-70%);
+		// top: unset;
+	}
 }
 
 .product__images {

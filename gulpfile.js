@@ -11,7 +11,7 @@ var paths = {
 Task for compiling Sass files
 */
 gulp.task('build:css', function () {
-  return sass('scss/_styles.scss', {
+  return sass( paths.scss, {
   	sourcemap: false, 
   	noCache: true,
   	style: 'compressed'
