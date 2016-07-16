@@ -1,0 +1,17 @@
+.related-products-container {
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.related-product {
+	max-width: 300px;
+}
+
+.related-product__image {
+	width: 100%;
+}

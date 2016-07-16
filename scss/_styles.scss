@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Main Sass source file
+   ========================================================================== */
+/**
+ * This is the main Sass file that will compile to styles.css in the root directory
+ */
+
+/* Setting Font Face
+   ========================================================================== */
+@font-face {
+  font-family: 'Graphik';
+  src: url('assets/Graphik-Medium.otf') format('otf'), 
+       url('assets/Graphik-Medium.woff') format('woff'), 
+       url('assets/Graphik-Medium.ttf')  format('truetype')
+}
+	
+
+/* Global variables
+   ========================================================================== */
+
+$true-white: #FFFFFF;
+$true-black: #000000;
+
+$grey--light: #f8f8f9;
+$beige :#f2d9a5;
+
+$primary: $true-black;
+$accent: $beige;
+
+$font-family: 'Graphik', Arial, sans-serif;
+
+$font-size--base: 17px;
+$font-color: $primary;
+
+/* Import styles
+   ========================================================================== */
+
+@import 'reset.scss';
+@import 'type.scss';
+@import 'main.scss';
+@import 'section.scss';

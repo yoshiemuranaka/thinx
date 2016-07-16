@@ -1,0 +1,6 @@
+node_modules
+.sass-cache
+styles.css.map
+coding_challenge.png
+instructions.txt
+assets

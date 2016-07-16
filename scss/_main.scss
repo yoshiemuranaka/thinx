@@ -1,0 +1,29 @@
+.product-container {
+	width: 100%;
+	background-color: $grey--light;
+	position: relative;
+}
+
+.product__description {
+	position: fixed;
+	width: 25%;
+	left: 7%;
+	top: 40%;
+}
+.product__options {
+	position: fixed;
+	width: 25%;
+	right: 7%;
+	top: 40%;
+}
+
+.product__images {
+	display: block;
+	text-align: center;
+}
+
+.product-image {
+	height: 100vh;
+	display: block;
+	margin: 0 auto;
+}

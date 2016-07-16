@@ -1,0 +1,35 @@
+body {
+	font-family: $font-family;
+	font-size: $font-size--base;
+	background-color: $true-white;
+	color: $font-color;
+}
+
+h1 {
+  font-size: 100%;
+  margin-bottom: 2em;
+}
+
+h2 {
+  font-size: 90%;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 90%;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+}
+
+a {
+	color: $font-color;
+	text-decoration: underline;
+}
+
+.product__price,
+.product__title {
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 0.8em;
+}
