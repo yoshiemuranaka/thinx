@@ -15,7 +15,6 @@ h1 {
 
 h2 {
   font-size: 110%;
-  // margin-bottom: 1em;
   line-height: 2em;
 }
 
@@ -29,6 +28,10 @@ p {
 a {
   color: $font-color;
   text-decoration: underline;
+  transition: all 0.3s ease;
+  &:hover {
+  	color: $hover;
+  }
 }
 
 .product__price,

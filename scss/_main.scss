@@ -11,10 +11,11 @@
   top: 30vh;
   left: 7%;
   width: 25%;
+  height: 50vh;
   &.not-sticky {
     position: absolute;
     top: unset;
-    bottom: 40vh;
+    bottom: 20vh;
   }
 }
 .product__options {
@@ -22,10 +23,11 @@
   top: 30vh;
   right: 7%;
   width: 25%;
+  height: 50vh;
   &.not-sticky {
     position: absolute;
     top: unset;
-    bottom: 40vh;
+    bottom: 20vh;
   }
 }
 

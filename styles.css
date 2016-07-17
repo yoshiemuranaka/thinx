@@ -82,7 +82,10 @@ p {
 
 a {
   color: #000000;
-  text-decoration: underline; }
+  text-decoration: underline;
+  transition: all 0.3s ease; }
+  a:hover {
+    color: #eb413a; }
 
 .product__price,
 .product__title {
@@ -104,21 +107,23 @@ a {
   position: fixed;
   top: 30vh;
   left: 7%;
-  width: 25%; }
+  width: 25%;
+  height: 50vh; }
   .product__description.not-sticky {
     position: absolute;
     top: unset;
-    bottom: 40vh; }
+    bottom: 20vh; }
 
 .product__options {
   position: fixed;
   top: 30vh;
   right: 7%;
-  width: 25%; }
+  width: 25%;
+  height: 50vh; }
   .product__options.not-sticky {
     position: absolute;
     top: unset;
-    bottom: 40vh; }
+    bottom: 20vh; }
 
 .product__images {
   display: block;
@@ -162,7 +167,8 @@ a {
   color: #FFFFFF;
   font-family: "Graphik", Arial, sans-serif;
   font-size: 17px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  cursor: pointer; }
 
 select,
 input,
@@ -170,24 +176,72 @@ label,
 option {
   font-size: 17px; }
 
-select {
+/* styles for color picker */
+input[type='radio'] {
+  position: absolute;
+  opacity: 0; }
+  input[type='radio']#black:checked + label {
+    background-image: url("assets/icon__check--white.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 85% center; }
+  input[type='radio']#beige:checked + label {
+    background-image: url("assets/icon__check--black.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 85% center; }
+
+.radio-group {
   display: block;
+  display: flex;
   height: 2em;
   width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-  background-color: transparent;
+  margin-bottom: 25px;
   border: 1px solid #000000;
-  border-radius: 0;
-  -webkit-appearance: none; }
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative; }
+  .radio-group label {
+    width: 100%;
+    padding: 0 8px;
+    line-height: 2em; }
+  .radio-group label[for='black'] {
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer; }
+  .radio-group label[for='beige'] {
+    background-color: #f2d9a5;
+    color: #000000;
+    cursor: pointer; }
 
-input[type='radio'] {
-  display: inline-block; }
+.control-icon {
+  position: absolute;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: all 0.3s ease; }
+  .control-icon:hover {
+    background-color: #FFFFFF; }
+  .control-icon.minus {
+    left: 1px;
+    border-right: 1px solid #000000; }
+  .control-icon.plus {
+    right: 1px;
+    border-left: 1px solid #000000; }
 
+/* styles for quantity */
 input[type='number'] {
   display: inline;
-  width: 25px;
-  background-color: transparent; }
+  width: 35px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  text-align: center; }
+
+/* this is hiding the browswer arrow styles in the number input field */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
 
 label[for='quantity'] {
   display: block;
@@ -199,24 +253,24 @@ label[for='quantity'] {
   line-height: 2em;
   text-align: center; }
 
-.radio-group {
+/* styles for size dropdown */
+select {
   display: block;
-  display: flex;
   height: 2em;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Graphik", Arial, sans-serif;
+  letter-spacing: 1px;
+  background-color: transparent;
   border: 1px solid #000000;
-  justify-content: space-between;
-  flex-direction: row; }
-  .radio-group label {
-    width: 100%;
-    padding: 0 8px;
-    line-height: 2em; }
-  .radio-group label[for='black'] {
-    background-color: #000000;
-    color: #FFFFFF; }
-  .radio-group label[for='beige'] {
-    background-color: #f2d9a5;
-    color: #000000; }
+  border-radius: 0;
+  -webkit-appearance: none;
+  position: relative;
+  background-image: url("assets/icon--arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 96% center; }
 
 /*# sourceMappingURL=styles.css.map */

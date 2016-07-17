@@ -13,8 +13,9 @@
   font-family: $font-family;
   font-size: $font-size--base;
   letter-spacing: 1px;
-}
 
+  cursor: pointer;
+}
 
 select,
 input,
@@ -23,47 +24,28 @@ option {
   font-size: $font-size--base;
 }
 
-select {
-  display: block;
-  height: 2em;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 5px;
-
-  background-color: transparent;
-  border: 1px solid $primary;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
+/* styles for color picker */
 input[type='radio'] {
-  display: inline-block;
+  position: absolute;
+
+  opacity: 0;
+  &#black:checked + label {
+    background-image: url('assets/icon__check--white.svg');
+    background-repeat: no-repeat;
+    background-position: 85% center;
+    background-size: 15px;
+  }
+  &#beige:checked + label {
+    background-image: url('assets/icon__check--black.svg');
+    background-repeat: no-repeat;
+    background-position: 85% center;
+    background-size: 15px;
+  }
 }
-
-input[type='number'] {
-  display: inline;
-  width: 25px;
-
-  background-color: transparent;
-}
-
-label[for='quantity'] {
-  display: block;
-  height: 2em;
-  margin-bottom: 25px;
-  padding: 0 5px;
-
-  border: 1px solid $primary;
-
-  background-color: transparent;
-
-  line-height: 2em;
-  text-align: center;
-}
-
 .radio-group {
   display: block;
   display: flex;
+  position: relative;
   height: 2em;
   width: 100%;
   margin-bottom: 25px;
@@ -82,10 +64,102 @@ label[for='quantity'] {
     background-color: $primary;
 
     color: $true-white;
+
+    cursor: pointer;
   }
   label[for='beige'] {
     background-color: $accent;
 
     color: $primary;
+
+    cursor: pointer;
   }
 }
+
+.control-icon {
+  position: absolute;
+  padding: 0 15px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $true-white;
+  }
+  &.minus {
+    left: 1px;
+
+    border-right: 1px solid $primary;
+  }
+  &.plus {
+    right: 1px;
+
+    border-left: 1px solid $primary;
+  }
+}
+
+/* styles for quantity */
+input[type='number'] {
+  display: inline;
+  width: 35px;
+
+  border: none;
+  outline: none;
+
+  background-color: transparent;
+
+  text-align: center;
+}
+
+/* this is hiding the browswer arrow styles in the number input field */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+label[for='quantity'] {
+  display: block;
+  height: 2em;
+  margin-bottom: 25px;
+  padding: 0 5px;
+
+  border: 1px solid $primary;
+
+  background-color: transparent;
+
+  line-height: 2em;
+  text-align: center;
+}
+
+/* styles for size dropdown */
+select {
+  display: block;
+  position: relative;
+  height: 2em;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+
+  border: 1px solid $primary;
+  border-radius: 0;
+
+  background-color: transparent;
+  background-image: url('assets/icon--arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 96% center;
+  background-size: 10px;
+
+  font-family: $font-family;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  -webkit-appearance: none;
+}
+
+
+
+
+
