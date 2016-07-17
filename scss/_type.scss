@@ -28,9 +28,10 @@ p {
 a {
   color: $font-color;
   text-decoration: underline;
+
   transition: all 0.3s ease;
   &:hover {
-  	color: $hover;
+    color: $hover;
   }
 }
 

@@ -107,8 +107,9 @@ a {
   position: fixed;
   top: 30vh;
   left: 7%;
+  height: 50vh;
   width: 25%;
-  height: 50vh; }
+  max-width: 375px; }
   .product__description.not-sticky {
     position: absolute;
     top: unset;
@@ -118,8 +119,9 @@ a {
   position: fixed;
   top: 30vh;
   right: 7%;
+  height: 50vh;
   width: 25%;
-  height: 50vh; }
+  max-width: 375px; }
   .product__options.not-sticky {
     position: absolute;
     top: unset;
@@ -162,7 +164,6 @@ a {
   margin: 25px 0;
   padding: 0.5em;
   border: none;
-  outline: none;
   background-color: #000000;
   color: #FFFFFF;
   font-family: "Graphik", Arial, sans-serif;
@@ -179,31 +180,31 @@ option {
 /* styles for color picker */
 input[type='radio'] {
   position: absolute;
-  opacity: 0; }
+  opacity: 0 !important; }
   input[type='radio']#black:checked + label {
     background-image: url("assets/icon__check--white.svg");
     background-repeat: no-repeat;
-    background-size: 15px;
-    background-position: 85% center; }
+    background-position: 85% center;
+    background-size: 15px; }
   input[type='radio']#beige:checked + label {
     background-image: url("assets/icon__check--black.svg");
     background-repeat: no-repeat;
-    background-size: 15px;
-    background-position: 85% center; }
+    background-position: 85% center;
+    background-size: 15px; }
 
 .radio-group {
   display: block;
   display: flex;
+  position: relative;
   height: 2em;
   width: 100%;
   margin-bottom: 25px;
   border: 1px solid #000000;
   justify-content: space-between;
-  flex-direction: row;
-  position: relative; }
+  flex-direction: row; }
   .radio-group label {
     width: 100%;
-    padding: 0 8px;
+    padding: 0 15px;
     line-height: 2em; }
   .radio-group label[for='black'] {
     background-color: #000000;
@@ -232,16 +233,16 @@ input[type='radio'] {
 input[type='number'] {
   display: inline;
   width: 35px;
-  background-color: transparent;
-  outline: none;
   border: none;
+  outline: none;
+  background-color: transparent;
   text-align: center; }
 
 /* this is hiding the browswer arrow styles in the number input field */
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
+  margin: 0;
+  -webkit-appearance: none; }
 
 label[for='quantity'] {
   display: block;
@@ -256,21 +257,21 @@ label[for='quantity'] {
 /* styles for size dropdown */
 select {
   display: block;
+  position: relative;
   height: 2em;
   width: 100%;
   margin-bottom: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-family: "Graphik", Arial, sans-serif;
-  letter-spacing: 1px;
-  background-color: transparent;
+  padding: 5px 15px;
   border: 1px solid #000000;
   border-radius: 0;
-  -webkit-appearance: none;
-  position: relative;
-  background-image: url("assets/icon--arrow.svg");
+  background-color: transparent;
+  background-image: url("assets/icon__arrow.svg");
   background-repeat: no-repeat;
+  background-position: 96% center;
   background-size: 10px;
-  background-position: 96% center; }
+  font-family: "Graphik", Arial, sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-appearance: none; }
 
 /*# sourceMappingURL=styles.css.map */

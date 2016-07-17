@@ -5,7 +5,6 @@
   padding: 0.5em;
 
   border: none;
-  outline: none;
 
   background-color: $primary;
 
@@ -28,7 +27,7 @@ option {
 input[type='radio'] {
   position: absolute;
 
-  opacity: 0;
+  opacity: 0 !important;
   &#black:checked + label {
     background-image: url('assets/icon__check--white.svg');
     background-repeat: no-repeat;
@@ -56,7 +55,7 @@ input[type='radio'] {
   flex-direction: row;
   label {
     width: 100%;
-    padding: 0 8px;
+    padding: 0 15px;
 
     line-height: 2em;
   }
@@ -140,13 +139,13 @@ select {
   height: 2em;
   width: 100%;
   margin-bottom: 10px;
-  padding: 5px 10px;
+  padding: 5px 15px;
 
   border: 1px solid $primary;
   border-radius: 0;
 
   background-color: transparent;
-  background-image: url('assets/icon--arrow.svg');
+  background-image: url('assets/icon__arrow.svg');
   background-repeat: no-repeat;
   background-position: 96% center;
   background-size: 10px;

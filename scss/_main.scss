@@ -10,8 +10,9 @@
   position: fixed;
   top: 30vh;
   left: 7%;
-  width: 25%;
   height: 50vh;
+  width: 25%;
+  max-width: 375px;
   &.not-sticky {
     position: absolute;
     top: unset;
@@ -22,8 +23,9 @@
   position: fixed;
   top: 30vh;
   right: 7%;
-  width: 25%;
   height: 50vh;
+  width: 25%;
+  max-width: 375px;
   &.not-sticky {
     position: absolute;
     top: unset;

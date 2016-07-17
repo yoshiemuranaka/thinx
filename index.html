@@ -41,7 +41,6 @@
 			<div class="product__options js-sticky">
 				<h1 class="product__price">$35.00</h1>
 				<form>
-					
 					<div class="radio-group">
 						<label>color</label>
 						
@@ -53,7 +52,9 @@
 
 					</div>
 
-					<label for="quantity"><span class="control-icon minus js-controller-add">&#8211;</span>quantity (<input type="number" max="99" id="quantity" name="quantity" value="1">)<span class="control-icon plus js-controller-subtract">&#43;</span></label>
+					<label for="quantity">
+						<span class="control-icon minus js-controller" data-action="subtract">&#8211;</span>quantity (<input type="number" min="0" max="99" id="quantity" name="quantity" value="1">)<span class="control-icon plus js-controller" data-action="add">&#43;</span>
+					</label>
 
 					<select name="size">
 					  <option value="">size</option>
