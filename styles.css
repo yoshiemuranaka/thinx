@@ -112,7 +112,8 @@ html.disable-scroll {
   left: 7%;
   height: 50vh;
   width: 25%;
-  max-width: 375px; }
+  max-width: 375px;
+  margin: 0; }
   .product__description.not-sticky {
     position: absolute;
     top: unset;
@@ -124,7 +125,8 @@ html.disable-scroll {
   right: 7%;
   height: 50vh;
   width: 25%;
-  max-width: 375px; }
+  max-width: 375px;
+  margin: 0; }
   .product__options.not-sticky {
     position: absolute;
     top: unset;
@@ -132,11 +134,13 @@ html.disable-scroll {
 
 .product__images {
   display: block;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
 
 .product-image {
   display: block;
-  height: 100vh;
+  height: 90vh;
+  padding: 5vh 0;
   margin: 0 auto;
   cursor: url("assets/icon__zoom--in.svg"), pointer; }
 
@@ -158,6 +162,26 @@ html.disable-scroll {
   .lightbox.active {
     display: block; }
 
+/* Quick fix responsive layout */
+@media (min-width: 0) and (max-width: 1100px) {
+  .product__options,
+  .product__description,
+  .product__description.not-sticky,
+  .product__options.not-sticky {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 40px auto;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset; }
+
+  .product-image {
+    height: 50vh;
+    width: auto;
+    display: inline-block; } }
 .related-products-container {
   padding: 0 75px; }
 
@@ -172,14 +196,32 @@ html.disable-scroll {
   width: 60%;
   max-width: 550px;
   padding: 0 80px; }
+.related-product.landscape.solo {
+  width: 40%; }
 .related-product.portrait {
   width: 40%;
-  padding: 0 80px; }
+  padding: 0 80px;
+  max-width: 390px; }
 
 .related-product__image {
   width: 100%;
   margin-bottom: 25px; }
 
+/* Quick fix responsive layout */
+@media (min-width: 0) and (max-width: 1100px) {
+  .related-product.landscape.solo,
+  .related-product.landscape,
+  .related-product.portrait {
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    padding: 0;
+    margin: 0 auto; }
+
+  .row {
+    display: block;
+    width: 100%;
+    margin: 40px auto; } }
 .button {
   display: block;
   width: 100%;

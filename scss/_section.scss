@@ -17,13 +17,35 @@
     max-width: 550px;
     padding: 0 80px;
   }
+  &.landscape.solo {
+    width: 40%;
+  }
   &.portrait {
     width: 40%;
     padding: 0 80px;
+    max-width: 390px;
   }
 }
 
 .related-product__image {
   width: 100%;
   margin-bottom: 25px;
+}
+
+/* Quick fix responsive layout */
+@media (min-width: 0) and (max-width: 1100px) {
+  .related-product.landscape.solo,
+  .related-product.landscape,
+  .related-product.portrait {
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .row {
+    display: block;
+    width: 100%;
+    margin: 40px auto;
+  }
 }
