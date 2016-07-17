@@ -4,6 +4,7 @@ Interactions = {
 	init: function() {
 		this.scroll.init();
 		this.formActions.init();
+		this.lightbox.init();
 	}
 }
 
@@ -59,6 +60,30 @@ Interactions.formActions = {
 		var total = current -= 1;
 		document.getElementById('quantity').value = total;
 		console.log('subtracting');
+	}
+}
+
+Interactions.lightbox = {
+	init: function() {
+		this.listeners();
+	},
+	listeners: function() {
+		var trigger = document.querySelectorAll('.js-lightbox-trigger');
+		for(var i=0; i < trigger.length; i++) {
+			trigger[i].addEventListener("click", Interactions.lightbox.activate);
+		}	
+		var target = document.querySelectorAll('.js-lightbox-target');
+		for(var i=0; i < target.length; i++) {
+			target[i].addEventListener("click", Interactions.lightbox.close);
+		}	
+	},
+	activate: function() {
+		document.getElementById('js-lightbox-target').classList.add('active');
+		document.documentElement.classList.add('disable-scroll');
+	},
+	close: function() {
+		this.classList.remove('active');
+		document.documentElement.classList.remove('disable-scroll');
 	}
 }
 
