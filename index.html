@@ -41,22 +41,29 @@
 			<div class="product__options js-sticky">
 				<h1 class="product__price">$35.00</h1>
 				<form>
-					<input type="radio" name="color" value="black" id="black" checked>
-					<label for="black">Black</label>
-					<input type="radio" name="color" value="beige" id="beige">
-					<label for="beige">Beige</label>
 					
-					<input type="number" name="quantity">
+					<div class="radio-group">
+						<label>color</label>
+						<label for="black">black
+						<input type="radio" name="color" value="black" id="black" checked>
+						</label>
+						<label for="beige">beige
+						<input type="radio" name="color" value="beige" id="beige">
+						</label>
+					</div>
+
+					<label for="quantity"><span>-</span>quantity (<input type="number" id="quantity" name="quantity" value="1">)<span>+</span></label>
 
 					<select name="size">
 					  <option value="">size</option>
-					  <option value="xs">xmsall</option>
+					  <option value="xs">xsmall</option>
 					  <option value="s">small</option>
 					  <option value="m">medium</option>
 					  <option value="l">large</option>
 					</select>
+					<a href="#" class="help-text">what's my size?</a>
 
-					<input type="submit" value="submit" class="button">
+					<input type="submit" value="add to cart" class="button">
 				</form>
 				<a href="#">build a cycle set and save up to 20%</a>
 			</div>
